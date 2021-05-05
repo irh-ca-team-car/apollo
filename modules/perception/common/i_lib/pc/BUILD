@@ -19,7 +19,7 @@ cc_library(
 
 cc_library(
     name = "i_struct_s",
-    hdrs = ["i_struct_s.h"],
+    hdrs = ["i_struct_s.h","sse2neon.h"],
 )
 
 cc_library(

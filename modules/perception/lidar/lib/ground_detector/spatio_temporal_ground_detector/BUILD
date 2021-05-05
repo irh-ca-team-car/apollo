@@ -7,7 +7,6 @@ cc_library(
     name = "spatio_temporal_ground_detector",
     srcs = ["spatio_temporal_ground_detector.cc"],
     hdrs = ["spatio_temporal_ground_detector.h"],
-    copts = ["-msse4.1"],
     deps = [
         "//cyber",
         "//modules/perception/base",
@@ -27,19 +26,6 @@ cc_library(
         "//modules/perception/proto:perception_config_schema_cc_proto",
     ],
     alwayslink = True,
-)
-
-cc_test(
-    name = "spatio_temporal_ground_detector_test",
-    size = "small",
-    srcs = ["spatio_temporal_ground_detector_test.cc"],
-    copts = ["-fno-access-control"],
-    deps = [
-        ":spatio_temporal_ground_detector",
-        "@com_github_gflags_gflags//:gflags",
-        "@com_google_googletest//:gtest_main",
-        "@local_config_pcl//:pcl",
-    ],
 )
 
 cpplint()
