@@ -5,6 +5,6 @@ import "modules/contrib/lgsvl_msgs/proto/detection2d.proto";
 package apollo.contrib.lgsvl_msgs;
 
 message Detection2DArray {
-  apollo.common.Header header = 1;
+  required apollo.common.Header header = 1;
   repeated Detection2D detections = 2;
 }

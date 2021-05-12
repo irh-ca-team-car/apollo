@@ -159,8 +159,8 @@ message MainEmergencyStop {
   optional ReasonCode reason_code = 1;
   optional string reason = 2;
   oneof task {
-    EmergencyStopHardBrake hard_brake = 3;         // hard brake
-    EmergencyStopCruiseToStop cruise_to_stop = 4;  // cruise to stop
+    EmergencyStopHardBrake hard_brake = 3;         
+    EmergencyStopCruiseToStop cruise_to_stop = 4;  
   }
 }
 
@@ -208,7 +208,7 @@ message MainDecision {
     MainCruise cruise = 1;
     MainStop stop = 2;
     MainEmergencyStop estop = 3;
-    MainChangeLane change_lane = 4 [deprecated = true];
+    MainChangeLane change_lane = 4;
     MainMissionComplete mission_complete = 6;
     MainNotReady not_ready = 7;
     MainParking parking = 8;

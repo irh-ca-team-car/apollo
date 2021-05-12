@@ -62,20 +62,15 @@ message TaskConfig {
     SpeedBoundsDeciderConfig speed_bounds_decider_config = 14;
     STBoundsDeciderConfig st_bounds_decider_config = 15;
     // optimizers
-    OpenSpaceTrajectoryPartitionConfig open_space_trajectory_partition_config =
-        16;
-    OpenSpaceTrajectoryProviderConfig open_space_trajectory_provider_config =
-        17;
-    PiecewiseJerkNonlinearSpeedOptimizerConfig
-        piecewise_jerk_nonlinear_speed_optimizer_config = 18;
+    OpenSpaceTrajectoryPartitionConfig open_space_trajectory_partition_config =        16;
+    OpenSpaceTrajectoryProviderConfig open_space_trajectory_provider_config =     17;
+    PiecewiseJerkNonlinearSpeedOptimizerConfig  piecewise_jerk_nonlinear_speed_optimizer_config = 18;
     PiecewiseJerkPathOptimizerConfig piecewise_jerk_path_optimizer_config = 19;
-    PiecewiseJerkSpeedOptimizerConfig piecewise_jerk_speed_optimizer_config =
-        20;
+    PiecewiseJerkSpeedOptimizerConfig piecewise_jerk_speed_optimizer_config =        20;
     SpeedHeuristicOptimizerConfig speed_heuristic_optimizer_config = 21;
     // other tasks
     LearningModelInferenceTaskConfig learning_model_inference_task_config = 22;
-    LearningModelInferenceTrajectoryTaskConfig
-        learning_model_inference_trajectory_task_config = 23;
+    LearningModelInferenceTrajectoryTaskConfig learning_model_inference_trajectory_task_config = 23;
   }
 }
 
@@ -293,8 +288,7 @@ message ScenarioConfig {
   optional ScenarioType scenario_type = 1;
   oneof scenario_config {
     ScenarioLaneFollowConfig lane_follow_config = 2;
-    ScenarioBareIntersectionUnprotectedConfig
-        bare_intersection_unprotected_config = 3;
+    ScenarioBareIntersectionUnprotectedConfig        bare_intersection_unprotected_config = 3;
     ScenarioEmergencyPullOverConfig emergency_pull_over_config = 4;
     ScenarioEmergencyStopConfig emergency_stop_config = 5;
     ScenarioLearningModelSampleConfig learning_model_sample_config = 6;
@@ -303,10 +297,8 @@ message ScenarioConfig {
     ScenarioPullOverConfig pull_over_config = 9;
     ScenarioStopSignUnprotectedConfig stop_sign_unprotected_config = 10;
     ScenarioTrafficLightProtectedConfig traffic_light_protected_config = 11;
-    ScenarioTrafficLightUnprotectedLeftTurnConfig
-        traffic_light_unprotected_left_turn_config = 12;
-    ScenarioTrafficLightUnprotectedRightTurnConfig
-        traffic_light_unprotected_right_turn_config = 13;
+    ScenarioTrafficLightUnprotectedLeftTurnConfig        traffic_light_unprotected_left_turn_config = 12;
+    ScenarioTrafficLightUnprotectedRightTurnConfig        traffic_light_unprotected_right_turn_config = 13;
     ScenarioValetParkingConfig valet_parking_config = 14;
     ScenarioYieldSignConfig yield_sign_config = 15;
   }

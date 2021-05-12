@@ -9,7 +9,9 @@ message FeatureParam {
 }
 
 message ExtractorParam {
-  enum FeatureType { ROIPooling = 0; }
+  enum FeatureType {
+     ROIPooling = 0; 
+  }
   optional string feat_blob = 1;
   optional FeatureType feat_type = 2 [default = ROIPooling];
   optional ROIPoolingParam roi_pooling_param = 3;
