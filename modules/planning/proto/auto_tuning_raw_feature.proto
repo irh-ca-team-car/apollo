@@ -8,9 +8,7 @@ message PathPointRawFeature {
   optional apollo.common.PathPoint cartesian_coord = 1;
   optional apollo.common.FrenetFramePoint frenet_coord = 2;
 }
-
-message SpeedPointRawFeature {
-  message ObjectDecisionFeature {
+ message ObjectDecisionFeature {
     // obstacle id
     optional int32 id = 1;
     // relative to eog, s_obs - s_host [m]
@@ -22,6 +20,8 @@ message SpeedPointRawFeature {
     // speed [m / s]
     optional double speed = 5;
   }
+message SpeedPointRawFeature {
+ 
 
   optional double s = 1;            // [m]
   optional double t = 2;            // [s]
@@ -40,11 +40,7 @@ message SpeedPointRawFeature {
   repeated ObjectDecisionFeature sidepass_rear = 17;
   repeated ObjectDecisionFeature keep_clear = 18;
 }
-
-// caputuring the obstacle raw distance information from surrounding environment
-// based on ST graph
-message ObstacleSTRawData {
-  message STPointPair {
+ message STPointPair {
     optional double s_lower = 1;
     optional double s_upper = 2;
     optional double t = 3;
@@ -59,6 +55,10 @@ message ObstacleSTRawData {
     repeated STPointPair polygon = 8;
     repeated STPointPair distribution = 9;
   }
+// caputuring the obstacle raw distance information from surrounding environment
+// based on ST graph
+message ObstacleSTRawData {
+ 
 
   repeated ObstacleSTData obstacle_st_data = 1;
   repeated ObstacleSTData obstacle_st_nudge = 2;

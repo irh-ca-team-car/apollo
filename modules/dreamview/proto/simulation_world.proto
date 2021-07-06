@@ -265,7 +265,7 @@ message SimulationWorld {
   optional double map_radius = 19;
 
   // Planning data
-  optional apollo.planning_internal.PlanningData planning_data = 20;
+  optional apollo.planningInternal.PlanningData planning_data = 20;
 
   // GPS
   optional Object gps = 21;

@@ -64,6 +64,6 @@ message RoutingResponse {
   optional RoutingRequest routing_request = 4;
 
   // the map version which is used to build road graph
-  optional bytes map_version = 5;
+  optional string map_version = 5;
   optional apollo.common.StatusPb status = 6;
 }

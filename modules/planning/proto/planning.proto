@@ -68,7 +68,7 @@ message ADCTrajectory {
 
   // the routing used for current planning result
   optional apollo.common.Header routing_header = 16;
-  optional apollo.planning_internal.Debug debug = 8;
+  optional apollo.planningInternal.Debug debug = 8;
 
   enum RightOfWayStatus {
     UNPROTECTED = 0;

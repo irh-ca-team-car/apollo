@@ -176,18 +176,19 @@ message Esr_status4_4e3 {
   // [] [0|0]
   optional int32 can_tx_path_id_acc = 13;
 }
+message Motionpower {
+    optional bool can_tx_track_moving = 1;
+    optional bool can_tx_track_moving_fast = 2;
+    optional bool can_tx_track_moving_slow = 3;
+    optional int32 can_tx_track_power = 4;
+}
 
 message Esr_trackmotionpower_540 {
   // Report Message
   // [] [0|1]
   optional bool can_tx_track_rolling_count_2 = 1;
   optional int32 can_tx_track_can_id_group = 2;
-  message Motionpower {
-    optional bool can_tx_track_moving = 1;
-    optional bool can_tx_track_moving_fast = 2;
-    optional bool can_tx_track_moving_slow = 3;
-    optional int32 can_tx_track_power = 4;
-  }
+  
   repeated Motionpower can_tx_track_motion_power = 3;
 }
 

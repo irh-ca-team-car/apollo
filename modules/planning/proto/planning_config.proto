@@ -182,7 +182,16 @@ message ScenarioYieldSignConfig {
   optional double min_pass_s_distance = 3 [default = 3.0];      // meter
   optional float creep_timeout_sec = 4 [default = 10.0];        // sec
 }
-
+message StageConfig {
+    optional StageType stage_type = 1;
+    optional bool enabled = 2 [default = true];
+    // an ordered list of tasks that are used at runtime.
+    // the order determines the runtime order of the tasks.
+    repeated TaskConfig.TaskType task_type = 3;
+    // an unordered task configurations
+    repeated TaskConfig task_config = 4;
+  }
+  
 // scenario configs
 message ScenarioConfig {
   enum ScenarioType {
@@ -275,15 +284,7 @@ message ScenarioConfig {
     LEARNING_MODEL_RUN = 1000;
   };
 
-  message StageConfig {
-    optional StageType stage_type = 1;
-    optional bool enabled = 2 [default = true];
-    // an ordered list of tasks that are used at runtime.
-    // the order determines the runtime order of the tasks.
-    repeated TaskConfig.TaskType task_type = 3;
-    // an unordered task configurations
-    repeated TaskConfig task_config = 4;
-  }
+  
 
   optional ScenarioType scenario_type = 1;
   oneof scenario_config {

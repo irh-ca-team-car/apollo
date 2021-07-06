@@ -80,7 +80,7 @@ message CameraCalibrator {
 }
 
 message CameraObstacle {
-  optional PerceptionObstacle obstacle = 1;  // PerceptionObstacle
+  optional apollo.perception.PerceptionObstacle obstacle = 1;  // PerceptionObstacle
 
   // 2D information
   enum CameraType {
