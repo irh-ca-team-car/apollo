@@ -82,15 +82,16 @@ class STBoundaryMapper {
    * decision can be stopping for blocking obstacles, or can be due to
    * traffic rules, etc.
    */
-  bool MapStopDecision(Obstacle* stop_obstacle,
-                       const ObjectDecisionType& decision) const;
+  bool MapStopDecision(
+      Obstacle* stop_obstacle,
+      const apollo_msgs::msg::ApolloplanningObjectDecisionType& decision) const;
 
   /** @brief Fine-tune the boundary for yielding or overtaking obstacles.
    * Increase boundary on the s-dimension or set the boundary type, etc.,
    * when necessary.
    */
   void ComputeSTBoundaryWithDecision(Obstacle* obstacle,
-                                     const ObjectDecisionType& decision) const;
+                                     const apollo_msgs::msg::ApolloplanningObjectDecisionType& decision) const;
 
  private:
   const SpeedBoundsDeciderConfig& speed_bounds_config_;
